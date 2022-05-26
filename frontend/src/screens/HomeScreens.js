@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col } from "react-bootstrap";
 import Product from '../components/Product'
@@ -6,6 +7,7 @@ import Message from '../components/Message';
 import Loader from '../components/Loader';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
+import Meta from '../components/Meta';
 import { listProducts } from '../actions/productActions';
 import { useParams } from 'react-router-dom';
 
@@ -25,7 +27,8 @@ const HomeScreens = () => {
 
   return (
     <>
-      {!keyword && <ProductCarousel />}
+      <Meta />
+      {!keyword ? <ProductCarousel /> : <Link className='btn btn-light my-3' to='/'>Go Back</Link>}
       <h1>Latest products</h1>
       {loading ? (
         <Loader />
