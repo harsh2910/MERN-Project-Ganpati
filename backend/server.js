@@ -46,6 +46,8 @@ app.get('/api/config/paypal', (req, res) =>
     res.send(process.env.PAYPAL_CLIENT_ID)
 )
 
+app.get('/get-razorpay-key', (req, res) => res.send({ key:process.env.RAZORPAY_KEY_ID }))
+
 const __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 

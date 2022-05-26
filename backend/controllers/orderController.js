@@ -1,5 +1,6 @@
 import asyncHandler from 'express-async-handler';
 import Order from '../models/orderModel.js'
+import Razorpay from 'razorpay'
 
 // @dec Create new order
 // @routs POST /api/orders
@@ -79,6 +80,59 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
     }
 })
 
+// @dec razorpay instance create
+// @routs POST /api/orders/create-order
+// @access  Private
+const createOrder = asyncHandler(async (req, res) => {
+    console.log(req.body)
+    try{
+        const instance=new Razorpay({
+          key_id: process.env.RAZORPAY_KEY_ID,
+          key_secret: process.env.RAZORPAY_SECRET,
+        });
+        const options = {
+            amount: req.body.amount,
+            currency: 'INR',
+        };
+        const order = await instance.orders.create(options)
+        if(!order)return res.status(500).send('Some error occured');
+        res.send(order);
+      }catch(error){
+        res.status(500).send(error);
+      }
+})
+
+// @dec razorpay payment
+// @routs GET /api/orders/:id/pay-order
+// @access  Private
+const payOrder = asyncHandler(async (req, res) => {
+    try {
+        const { amount, razorpayPaymentId, razorpayOrderId, razorpaySignature }= req.body;
+        const order = await Order.findById(req.params.id);
+        order.isPaid = true,
+        order.paidAt = Date.now(),
+        order.paymentResult = {
+            id: req.body.id,
+            status: req.body.status,
+            update_time: req.body.update_time,
+        },
+        order.amount = amount,
+        order.razorpay = {
+            orderId:razorpayOrderId,
+            paymentId:razorpayPaymentId,
+            signature:razorpaySignature,
+        }
+        await order.save()
+        res.send({
+            msg:'Payment was successfull',
+        });
+        } catch(error) {
+            console.log(error);
+            res.status(500).send(error);
+        }
+})
+
+
 // @dec Update order to delivered
 // @routs GET /api/orders/:id/deliver
 // @access  Private/Admin
@@ -121,5 +175,7 @@ export {
     updateOrderToPaid,
     updateOrderToDelivered,
     getMyOrders,
-    getOrders
+    getOrders,
+    createOrder,
+    payOrder
 }

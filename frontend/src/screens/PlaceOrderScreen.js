@@ -135,7 +135,7 @@ const PlaceOrderScreen = () => {
                                  {error && <Message variant='danger'>{error}</Message>}
                             </ListGroup.Item>
                             <ListGroup.Item>
-                                <Button
+                                <Button style={{ width: '100%'}}
                                 type='button' className='btn-block'
                                 disabled={cart.cartItems === 0 }
                                 onClick={placeOrderHandler} >

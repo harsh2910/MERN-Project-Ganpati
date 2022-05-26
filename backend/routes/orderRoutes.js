@@ -6,7 +6,9 @@ import {
     updateOrderToPaid,
     updateOrderToDelivered,
     getMyOrders,
-    getOrders
+    getOrders,
+    createOrder,
+    payOrder
 } from '../controllers/orderController.js'; 
 import { protect, admin } from '../middleware/authMiddleware.js'
 
@@ -15,6 +17,10 @@ router.route('/')
     .get(protect, admin, getOrders)
 
 router.route('/myorders').get(protect, getMyOrders)
+
+router.route('/create-order').post(protect, createOrder)
+
+router.route('/:id/pay-order').post(protect, payOrder)
 
 router.route('/:id').get(protect, getOrderById)
 
