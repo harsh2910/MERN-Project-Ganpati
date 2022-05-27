@@ -233,7 +233,7 @@ const OrderScreen = () => {
                         </ListGroup.Item>
                         <ListGroup.Item>
                             <Row>
-                                <Col>Tax</Col>
+                                <Col>GST</Col>
                                 <Col>₹{order.taxPrice}</Col>
                             </Row>
                         </ListGroup.Item>
