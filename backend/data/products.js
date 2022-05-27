@@ -1,76 +1,157 @@
 const products = [
   {
-    name: 'Airpods Wireless Bluetooth Headphones',
-    image: '/images/airpods.jpg',
+    name: 'Saree Mall Floral Saree',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.mPth4OBPQyP1k7UZW49E0QHaJ4%26pid%3DApi&f=1',
     description:
-      'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
-    brand: 'Apple',
-    category: 'Electronics',
-    price: 89.99,
-    countInStock: 3,
-    rating: 4.5,
-    numReviews: 4,
-  },
-  {
-    name: 'iPhone 11 Pro 256GB Memory',
-    image: '/images/phone.jpg',
-    description:
-      'Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life',
-    brand: 'Apple',
-    category: 'Electronics',
-    price: 599.99,
+      'Dress up or dress down this modish saree for any ethnic function. It includes a captivating organza blouse and fabric to add a touch of charm to your appearanceThe saree comes with an unstitched blouse piece The blouse worn by the model might be for modelling purpose only.Check the image of the blouse piece to understand how the actual blouse piece looks like',
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 1043,
     countInStock: 10,
-    rating: 4.0,
-    numReviews: 4,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
-    name: 'Cannon EOS 80D DSLR Camera',
-    image: '/images/camera.jpg',
+    name: 'Red & Gold-Toned Woven Design Bandhani Saree',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.dXF4uoeHPTa6wt2RoCnTuwHaJ4%26pid%3DApi&f=1',
     description:
-      'Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design',
-    brand: 'Cannon',
-    category: 'Electronics',
+      `Red and gold-toned bandhani saree
+      Woven design woven design saree with embroidered border
+      The saree comes with an unstitched blouse piece, The blouse worn by the model might be for modelling purpose only`,
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 599.99,
+    countInStock: 7,
+    rating: 4.0,
+    numReviews: 8,
+  },
+  {
+    name: 'Maroon & Gold Ethnic Motifs Zari Silk Blend Banarasi Saree',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.WJ7b0TrkieU5BTb9NfRAtwHaLH%26pid%3DApi&f=1',
+    description:
+      `Maroon and gold-toned banarasi saree
+      Ethnic motifs woven design saree with woven design border
+      Has zari detail
+      
+      The saree comes with an unstitched blouse piece
+      
+      The blouse worn by the model might be for modelling purpose only. Check the image of the blouse piece to understand how the actual blouse piece looks like.`,
+    brand: 'Saree Mall',
+    category: 'Saree',
     price: 929.99,
     countInStock: 5,
     rating: 3,
-    numReviews: 3,
+    numReviews: 12,
   },
   {
-    name: 'Sony Playstation 4 Pro White Version',
-    image: '/images/playstation.jpg',
+    name: 'Pink & Navy Blue Striped Sequinned Floral Applique Saree',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.5i0Fh5ZpN4A2y7zKYjOosAHaKt%26pid%3DApi&f=1',
     description:
-      'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
-    brand: 'Sony',
-    category: 'Electronics',
-    price: 399.99,
-    countInStock: 10,
+    `Pink and navy blue saree
+    Striped and floral applique saree with solid border
+    Has sequinned detail
+    Disclaimer: The saree comes with an unstitched blouse piece
+    The blouse worn by the model might be for modelling purpose only. Check the image of the blouse piece to understand how the actual blouse piece looks like.`,
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 799.99,
+    countInStock: 11,
     rating: 5,
-    numReviews: 3,
+    numReviews: 12,
   },
   {
-    name: 'Logitech G-Series Gaming Mouse',
-    image: '/images/mouse.jpg',
+    name: 'Magenta Silk Blend Woven Design Banarasi Saree',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.oImFN19lVv-q6BlBU1u63gHaLH%26pid%3DApi&f=1',
     description:
-      'Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience',
-    brand: 'Logitech',
-    category: 'Electronics',
-    price: 49.99,
+      `Magenta banarasi woven design saree and has a solid border
+      Blouse Piece
+      The model is wearing a stitched version of the blouse`,
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 1449.99,
     countInStock: 7,
     rating: 3.5,
-    numReviews: 2,
+    numReviews: 10,
   },
   {
-    name: 'Amazon Echo Dot 3rd Generation',
-    image: '/images/alexa.jpg',
+    name: 'Ethnic Motifs Silk Blend Saree with Woven Design border',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8mTZkiCdYylqaG9LHrhkJgHaLG%26pid%3DApi&f=1',
     description:
-      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
-    brand: 'Amazon',
-    category: 'Electronics',
-    price: 29.99,
+      `Amp up your saree collection with this ever-so-beautiful piece. It is highlighted by an appealing woven design border and a graceful-looking ethnic print. 
+      Off-white woven design saree
+      Ethnic motifs
+      Woven design border
+      Silk blend blouse
+      Silk blend, dry clean
+      The model is wearing the stitched blouse that comes with the saree.`,
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 1129.99,
     countInStock: 0,
     rating: 4,
-    numReviews: 4,
+    numReviews: 12,
+  },
+  {
+    name: 'Off White & Pink Floral Silk Blend Saree',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.EHesgccmEohTkq3XPDKPkgHaJ4%26pid%3DApi&f=1',
+    description:
+    `Off white and pink saree
+    Floral woven design saree with woven design border
+    
+    The saree comes with an unstitched blouse piece
+    The blouse worn by the model might be for modelling purpose only. Check the image of the blouse piece to understand how the actual blouse piece looks like.`,
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 1039.99,
+    countInStock: 0,
+    rating: 4,
+    numReviews: 12,
+  },
+  {
+    name: 'Mustard Party Wear Saree with Matching Blouse',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.qpyVVwoY0wDJUZd43xARywHaJ2%26pid%3DApi&f=1',
+    description:
+    `An ideal choice for a special occasion, this lovely saree is a charmer. Designed with a classic solid pattern and an eye-catching solid border it adds beauty to your looks.
+    Creamy mustard saree
+    Solid pattern
+    Solid border
+    Velvet blouse piece
+    Poly georgette, dry clean`,
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 1999.99,
+    countInStock: 6,
+    rating: 4,
+    numReviews: 12,
+  },
+  {
+    name: 'Teal Blue Solid Accordian Pleat Ruffles Saree with Embroidered Blouse',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.IIBjNPTaZVmGOoUJEPLE6wHaLG%26pid%3DApi&f=1',
+    description:
+    `Teal blue ruffle accordion pleat saree`,
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 999.99,
+    countInStock: 6,
+    rating: 4,
+    numReviews: 12,
+  },
+  {
+    name: 'Pink & Silver-Toned Paisley Zari Silk Blend Banarasi Saree',
+    image: ' https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.9g8wnprux8wb_bP9k-ifwwHaKL%26pid%3DApi&f=1',
+    description:
+    `Pink and silver-toned banarasi saree
+    Paisley woven design saree with zari border
+    Has zari detail
+    
+    The saree comes with an unstitched blouse piece
+    The blouse worn by the model might be for modelling purpose only. Check the image of the blouse piece to understand how the actual blouse piece looks like.`,
+    brand: 'Saree Mall',
+    category: 'Saree',
+    price: 899.99,
+    countInStock: 6,
+    rating: 4,
+    numReviews: 12,
   },
 ]
-
 export default products
