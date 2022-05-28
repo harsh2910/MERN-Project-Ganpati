@@ -245,7 +245,7 @@ const OrderScreen = () => {
                         </ListGroup.Item>
                         {!order.isPaid && (
                             <ListGroup.Item>
-                                {order.paymentMethod ?? localStorage.getItem('paymentMethod') === "RazorPay" ? (
+                                {order.paymentMethod  === "RazorPay" ? (
                                     <Button style={{ width: "100%" }} disabled={lod} onClick={loadRazorPay}>Pay with RazorPay</Button>
                                 ) : (
                                     <>
