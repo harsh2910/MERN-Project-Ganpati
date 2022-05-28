@@ -48,6 +48,7 @@ const PlaceOrderScreen = () => {
                 taxPrice: cart.taxPrice,
                 totalPrice: cart.totalPrice
         }))
+        localStorage.removeItem('cartItems')
     }
 
     return (
