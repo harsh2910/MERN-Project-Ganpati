@@ -59,7 +59,7 @@ const OrderScreen = () => {
             document.body.appendChild(script)
         }
 
-        if (!order || successPay || successDeliver) {
+        if (!order || successPay || successDeliver || order._id !== orderId) {
             dispatch({ type: ORDER_PAY_RESET })
             dispatch({ type: ORDER_DELIVER_RESET })
             dispatch(getOrderDetails(orderId))
@@ -99,8 +99,8 @@ const OrderScreen = () => {
                     key: razorpaykey,
                     amount: amount.toString(),
                     currency: currency,
-                    name: 'example name',
-                    description: 'example transaction',
+                    name: 'GANPATI',
+                    description: `ORDER ID: ${order._id}`,
                     order_id: order_id,
                     handler: async function (response) {
                         const result = await axios.post(`/api/orders/${order._id}/pay-order`, {
@@ -124,9 +124,9 @@ const OrderScreen = () => {
 
                     },
                     prefill: {
-                        name: 'example name',
-                        email_address: 'email@example.com',
-                        contact: '111111',
+                        name: '',
+                        email_address: '',
+                        contact: '',
                     },
                     notes: {
                         address: 'example address',
@@ -200,7 +200,7 @@ const OrderScreen = () => {
                                                 </Link>
                                             </Col>
                                             <Col md={4}>
-                                                {item.qty} x ₹{item.price} = ₹{item.qty * item.price}
+                                                {item.qty} x ₹{item.price} = ₹{(item.qty * item.price).toFixed(2)}
                                             </Col>
                                         </Row>
                                     </ListGroup.Item>
@@ -245,7 +245,7 @@ const OrderScreen = () => {
                         </ListGroup.Item>
                         {!order.isPaid && (
                             <ListGroup.Item>
-                                {order.paymentMethod === "RazorPay" ? (
+                                {order.paymentMethod ?? localStorage.getItem('paymentMethod') === "RazorPay" ? (
                                     <Button style={{ width: "100%" }} disabled={lod} onClick={loadRazorPay}>Pay with RazorPay</Button>
                                 ) : (
                                     <>

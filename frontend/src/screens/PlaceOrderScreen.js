@@ -13,7 +13,7 @@ const PlaceOrderScreen = () => {
 
     const cart = useSelector(state => state.cart)
 
-
+    const paymentMethod = localStorage.getItem('paymentMethod')
     //  Calculate prices
 
     const addDecimal = (num) => {
@@ -42,7 +42,7 @@ const PlaceOrderScreen = () => {
             createOrder({
                 orderItems: cart.cartItems,
                 shippingAddress: cart.shippingAddress,
-                paymentMethod: cart.paymentMethod,
+                paymentMethod: cart.paymentMethod ?? paymentMethod,
                 itemsPrice: cart.itemsPrice,
                 shippingPrice: cart.shippingPrice,
                 taxPrice: cart.taxPrice,
@@ -67,7 +67,7 @@ const PlaceOrderScreen = () => {
                         <ListGroup.Item>
                             <h2>Payment Method</h2>
                             <strong>Method: </strong>
-                            {cart.paymentMethod}
+                            {cart.paymentMethod ?? paymentMethod}
                         </ListGroup.Item>
 
                         <ListGroup.Item>
@@ -88,7 +88,7 @@ const PlaceOrderScreen = () => {
                                                     </Link>
                                                 </Col>
                                                 <Col md={4}>
-                                                    {item.qty} x ₹{item.price} = ₹{item.qty * item.price}
+                                                    {item.qty} x ₹{item.price} = ₹{(item.qty * item.price).toFixed(2)}
                                                 </Col>
                                             </Row>
                                         </ListGroup.Item>
@@ -137,7 +137,7 @@ const PlaceOrderScreen = () => {
                             <ListGroup.Item>
                                 <Button style={{ width: '100%'}}
                                 type='button' className='btn-block'
-                                disabled={cart.cartItems === 0 }
+                                disabled={cart.cartItems.length === 0 }
                                 onClick={placeOrderHandler} >
                                     Place Order
                                 </Button>
