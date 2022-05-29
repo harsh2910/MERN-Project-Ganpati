@@ -37,8 +37,8 @@ const PaymentScreen = () => {
                         id='Paypal'
                         name='paymentMethod'
                         value='PayPal'
-                        onChange={(e) => setPaymentMethod(e.target.value)}></Form.Check>
-
+                        onClick={(e) => setPaymentMethod(e.target.value)}></Form.Check>
+                    <br />
                     <Form.Check
                         type='radio'
                         label='UPI, WALLET, Card'
@@ -46,8 +46,8 @@ const PaymentScreen = () => {
                         name='paymentMethod'
                         value='RazorPay'
                         checked
-                        onChange={(e) => setPaymentMethod(e.target.value)}></Form.Check>
-
+                        onClick={(e) => setPaymentMethod(e.target.value)}></Form.Check>
+                    <br />
                     {/* <Form.Check
                 type='radio'
                 label='Stripe'

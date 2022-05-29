@@ -37,7 +37,7 @@ const CartScreen = () => {
     return (
         <Row>
             <Col md={8}>
-                <h1>Shoping Cart</h1>
+                <h1>Shopping Cart</h1>
                 {cartItems.length === 0 ? (<Message> Your Cart is empty <Link to='/'>Go Back</Link></Message>) : (
                     <ListGroup variant='flush'>
                         {cartItems.map(item => (

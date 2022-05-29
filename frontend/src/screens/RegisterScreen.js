@@ -51,7 +51,7 @@ const RegisterScreen = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)} />
                 </Form.Group>
-
+                <br />
                 <Form.Group controlId='email'>
                     <Form.Label>Email Address</Form.Label>
                     <Form.Control type='email'
@@ -59,7 +59,7 @@ const RegisterScreen = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
-
+                <br />
                 <Form.Group controlId='password'>
                     <Form.Label>Password</Form.Label>
                     <Form.Control type='password'
@@ -67,7 +67,7 @@ const RegisterScreen = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
-
+                <br />
                 <Form.Group controlId='confirmPassword'>
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control type='password'
@@ -75,14 +75,14 @@ const RegisterScreen = () => {
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)} />
                 </Form.Group>
-
+                <br />
                 <Button variant='primary' type='submit'>
                     Register
                 </Button>
             </Form>
             <Row className='py-3'>
                 <Col>
-                    Have an Account? 
+                    Have an Account? &nbsp;&nbsp;
                     <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
                         Login
                     </Link>

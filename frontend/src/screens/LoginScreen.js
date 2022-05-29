@@ -41,6 +41,7 @@ const LoginScreen = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
+                <br />
 
                 <Form.Group controlId='password'>
                     <Form.Label>Password</Form.Label>
@@ -49,14 +50,14 @@ const LoginScreen = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
-
+                <br />
                 <Button variant='primary' type='submit'>
                     Sign In
                 </Button>
             </Form>
             <Row className='py-3'>
                 <Col>
-                    New Customer? 
+                    New Customer? &nbsp;&nbsp;
                     <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
                         Register
                     </Link>

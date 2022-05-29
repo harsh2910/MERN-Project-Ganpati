@@ -89,7 +89,7 @@ const ProductEditScreen = () => {
     }
     return (
         <>
-            <Link to='/admin/productlist' className='btn btn-light my-3'>
+            <Link to='/admin/productlist' className='btn btn-dark my-3'>
                 Go Back
             </Link>
             <FormContainer>
@@ -105,7 +105,7 @@ const ProductEditScreen = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)} />
                         </Form.Group>
-
+                        <br />
                         <Form.Group controlId='Price'>
                             <Form.Label>Price</Form.Label>
                             <Form.Control type='number'
@@ -113,7 +113,7 @@ const ProductEditScreen = () => {
                             value={price}
                             onChange={(e) => setPrice(e.target.value)} />
                         </Form.Group>
-
+                        <br />
                         <Form.Group controlId='image'>
                             <Form.Label>Image</Form.Label>
                             <Form.Control
@@ -129,7 +129,7 @@ const ProductEditScreen = () => {
                             ></Form.Control>
                             {uploading && <Loader />}
                         </Form.Group>
-
+                        <br />
                         <Form.Group controlId='brand'>
                             <Form.Label>Brand</Form.Label>
                             <Form.Control type='text'
@@ -137,7 +137,7 @@ const ProductEditScreen = () => {
                             value={brand}
                             onChange={(e) => setBrand(e.target.value)} />
                         </Form.Group>
-
+                        <br />
                         <Form.Group controlId='countinstock'>
                             <Form.Label>Count In Stock</Form.Label>
                             <Form.Control type='number'
@@ -145,7 +145,7 @@ const ProductEditScreen = () => {
                             value={countInStock}
                             onChange={(e) => setCountInStock(e.target.value)} />
                         </Form.Group>
-                        
+                        <br />
                         <Form.Group controlId='category'>
                             <Form.Label>Category</Form.Label>
                             <Form.Control type='text'
@@ -153,7 +153,7 @@ const ProductEditScreen = () => {
                             value={category}
                             onChange={(e) => setCategory(e.target.value)} />
                         </Form.Group>
-
+                        <br />
                         <Form.Group controlId='description'>
                             <Form.Label>Description</Form.Label>
                             <Form.Control type='text'
@@ -161,7 +161,7 @@ const ProductEditScreen = () => {
                             value={description}
                             onChange={(e) => setDescription(e.target.value)} />
                         </Form.Group>
-
+                        <br />
                         <Button variant='primary' type='submit'>
                             Update
                         </Button>

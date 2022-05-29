@@ -36,9 +36,9 @@ const ShippingScreen = () => {
                 required
                 onChange={(e) => setAddress(e.target.value)} />
         </Form.Group>
-
+            <br />
         <Form.Group controlId='city'>
-            <Form.Label>city</Form.Label>
+            <Form.Label>City</Form.Label>
             <Form.Control 
                 type='text'
                 placeholder='Enter City'
@@ -46,7 +46,7 @@ const ShippingScreen = () => {
                 required
                 onChange={(e) => setCity(e.target.value)} />
         </Form.Group>
-
+            <br />
         <Form.Group controlId='postalCode'>
             <Form.Label>Postal Code</Form.Label>
             <Form.Control 
@@ -56,7 +56,7 @@ const ShippingScreen = () => {
                 required
                 onChange={(e) => setPostalCode(e.target.value)} />
         </Form.Group>
-
+            <br />
         <Form.Group controlId='country'>
             <Form.Label>Country</Form.Label>
             <Form.Control 
@@ -66,7 +66,7 @@ const ShippingScreen = () => {
                 required
                 onChange={(e) => setCountry(e.target.value)} />
         </Form.Group>
-
+            <br />
         <Button variant="primary" type="submit">
             Continue
         </Button>
